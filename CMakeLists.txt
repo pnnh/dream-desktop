@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(qt-editor VERSION 0.1 LANGUAGES CXX)
+project(dream-desktop VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -23,17 +23,17 @@ set(PROJECT_SOURCES
         src/models/videoListModel.cc src/models/videoListModel.h
         src/models/sqliteModel.cc src/models/sqliteModel.h)
 
-qt_add_executable(qt-editor
+qt_add_executable(dream-desktop
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES})
 
-target_link_libraries(qt-editor
+target_link_libraries(dream-desktop
         PRIVATE Qt6::Core Qt6::Gui Qt6::Quick Qt6::QuickControls2 Qt6::Sql)
 
-qt_import_qml_plugins(qt-editor)
-qt_finalize_executable(qt-editor)
+qt_import_qml_plugins(dream-desktop)
+qt_finalize_executable(dream-desktop)
 
-qt_add_qml_module(qt-editor
+qt_add_qml_module(dream-desktop
         URI QtEditor
         VERSION 1.0
         SOURCES
